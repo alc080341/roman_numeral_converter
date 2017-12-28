@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<!-- How characters are defined -->
+	<meta name="description" content="A Roman Numeral Converter">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+ 	<script type="text/javascript">
+ 		
+
+function convertToRoman(num)
+{
+	var decimalNumber = parseInt(num);
+
+	if(!isNaN(decimalNumber))
+	{
+		var romanNumeral = "";
+ 		
+ 		//M has a value of 1000, so I have made two arrays that compare each Roman numeral to the equivalent decimal number 
+ 		var romanNumeralValue = ["M", "CM", "D", "CD", "C", "XC", "L" , "XL", "X", "IX", "V", "IV", "I"];	
+ 		var numbers = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+
+ 		//iterate through length of numbers array
+ 		for(var i=0; i<numbers.length; i++)
+ 		{
+ 			//While the number is still higher than the current array value numbers[i],
+ 			//Add a Roman Numeral to the value roman Numeral from the curr entromanNumeralValue array value
+ 			while(decimalNumber >= numbers[i])
+			{ 
+				romanNumeral = romanNumeral + romanNumeralValue[i];
+				//keep subracting from original number to end loop
+				decimalNumber = decimalNumber - numbers[i];
+			}
+
+ 		}
+
+ 		alert(romanNumeral);
+
+ 		document.getElementById("return_text").innerHTML = "<p>Roman Numerals Value:</p>" + "<p>" + romanNumeral + "</p>";
+
+
+
+ 	}
+
+	else
+	{
+		return alert("Please enter a number");
+	}
+}
+
+
+ 	</script>
+	<title>Roman Numeral Converter</title>
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="input_area">
+		<h1>Convert to Roman Numerals</h1>
+		<br/>
+		<p>Enter your number and click button to convert to Roman Numerals.</p> 
+		<br/>
+		<form>
+			<p><input type="number" id="original_text" name="original_text" class="original_text"></p>
+			<p>
+			<br/>
+			<button type="button" class="btn btn-primary btn-lg" onclick="convertToRoman(this.form.original_text.value);">Convert to Roman Numerals!</button>
+			<div id="return_text" class="return_text"></div>
+	
+			</p>
+		</form>
+		<br>
+			
+			</div>
+		<div>
+	</div>
+
+</div>
+	
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+
+

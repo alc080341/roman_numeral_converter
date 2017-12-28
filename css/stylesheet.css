@@ -1,0 +1,91 @@
+
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+html
+{
+	height: 100%;
+}
+
+
+body  {
+	height:100%;
+  background-image: -webkit-linear-gradient(left, black, black, transparent), url('../images/background.jpeg'); /* For Safari 5.1 to 6.0 */
+  background-image: -o-linear-gradient(left, black, black, transparent), url('../images/background.jpeg'); /* For Opera 11.1 to 12.0 */
+  background-image: -moz-linear-gradient(left, black, black, transparent), url('../images/background.jpeg'); /* For Firefox 3.6 to 15 */
+  background-image: linear-gradient(to left, black, black, transparent), url('../images/background.jpeg'); /* Standard syntax */
+background-repeat: no-repeat; 
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; font-family: "Times New Roman", Georgia, Serif;
+ font-size: 20px;
+ font-weight: bold;
+ color: #fff;
+}
+
+
+
+
+
+.input_area
+{
+	min-height: 500px;
+	float: right;
+	width: 50%;
+	padding: 30px;
+}
+.original_text
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 50%;
+	color: #000;
+}
+.return_text
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	max-width: 100%;
+	overflow: auto;
+	font-size: 50px;
+	border-radius: 20px;
+	padding: 30px;
+	min-height: 200px;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1100px) {
+
+
+.input_area
+{
+	min-height: 500px;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
+
+ 
+}
+
+@media only screen and (max-width: 699px) {
+
+body
+{
+background-image: -webkit-linear-gradient(black, transparent), url('../images/background.jpeg'); /* For Safari 5.1 to 6.0 */
+}
+
+.input_area
+{
+	min-height: 500px;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
+
+.return_text
+{
+	font-size: 25px;
+}
+ 
+	}
+
+
